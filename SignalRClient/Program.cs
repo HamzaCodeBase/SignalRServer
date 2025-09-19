@@ -20,16 +20,17 @@ namespace SignalRClient
             await connection.StartAsync();
             Console.WriteLine("Connected to SignalR server!");
 
+            await Task.Delay(-1);
             // Loop to send messages
-            while (true)
-            {
-                Console.Write("Enter your name: ");
-                var user = Console.ReadLine();
-                Console.Write("Enter message: ");
-                var msg = Console.ReadLine();
+            //while (true)
+            //{
+            //    //Console.Write("Enter your name: ");
+            //    //var user = Console.ReadLine();
+            //    //Console.Write("Enter message: ");
+            //    //var msg = Console.ReadLine();
 
-                await connection.InvokeAsync("SendMessage", user, msg);
-            }
+            //    //await connection.InvokeAsync("SendMessage", user, msg);
+            //}
         }
     }
 }
